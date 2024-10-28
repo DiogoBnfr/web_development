@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>Formulário de Doação</title>
+        <link rel="stylesheet" href="exercicio2.html.css">
+</head>
+<body>
+    <div id="background"></div>
+    <main>
+        <h1>Dados de Informação do Doador</h1>
+        <form action="https://lex2.unilasalle.edu.br/lex_web_application/_lmsFiles/aula-aula-3-16-08-23-a012cd4269701db6d6a17a25426765e9/conteudo-exerccio-de-formulrio-71bd60a0d33125d6c7fae31490bea91a/entregas/POST" method="post" title="Dados de Informações">
+            <input type="text" name="Nome" placeholder="Nome">
+            <input type="text" name="Usuário" placeholder="Usuário">
+            <input type="password" name="Senha" id="senha" placeholder="Senha">
+            <input type="email" name="E-mail" id="email" placeholder="E-mail">
+            <input type="text" name="Telefone" id="telefone" placeholder="Telefone" maxlength="14">
+            <label for="dataDeNascimento">Data de Nascimento</label>
+            <div id="dateGroup">
+                <input type="date" name="Data de Nascimento" id="dataDeNascimento">
+                <span>Idade:</span><label for="dataDeNascimento" id="idade"></label>
+            </div>
+            <input type="number" name="Peso" id="peso" placeholder="Peso (kg)">
+            <select name="Tipo Sanguíneo" id="tipoSanguineo">
+                <option disabled="" selected="">Selecione uma opção</option>
+                <option value="O">O</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="AB">AB</option>
+            </select>
+            <select name="Fator Rh" id="fatorRh">
+                <option disabled="" selected="">Selecione uma opção</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+            </select>
+            <p>Gênero:</p>
+            <div class="radioGroup">
+                <input type="radio" id="feminino" name="genero" value="Feminino">
+                <label for="feminino">Feminino</label><br>
+                <input type="radio" id="masculino" name="genero" value="Masculino">
+                <label for="masculino">Masculino</label><br>
+                <input type="radio" id="outro" name="genero" value="Outro">
+                <label for="outro">Outro</label><br>
+            </div>
+            <input type="number" name="numeroDoDocumento" id="numeroDoDocumento" placeholder="Número do documento">
+            <div class="checkboxGroup">
+                <fieldset>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Estar descansado (ter dormido pelo menos 6 horas nas últimas 24 horas)</label><br>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Estar alimentado, evitando alimentos gordurosos</label><br>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Não tem com anemia no teste realizado imediatamente antes da doação</label><br>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Não tem com hipertensão ou hipotensão arterial no momento da doação</label><br>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Não está com aumento ou diminuição dos batimentos cardíacos no momento da doação</label><br>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Não está com febre no dia da doação</label><br>
+                </fieldset>
+            </div>
+            <textarea name="aditionalInfo" id="aditionalInfo" cols="40" rows="15"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <script>
+        document.getElementById("dataDeNascimento").addEventListener("change", function() {
+            let today = new Date();
+            let input = new Date(this.value);
+            let age = today.getFullYear() - input.getFullYear();
+            const label = document.getElementById("idade");
+            label.innerText=age;
+        });
+    </script>
+</body>
+</html>

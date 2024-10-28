@@ -1,0 +1,67 @@
+/* 
+ * Author: Diogo Gonçalves B. dos Santos
+ */
+ 
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("wallhaven-q6oped.jpg");
+    filter: blur(8px);
+    z-index: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    z-index: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+h1 {
+    color: #0e1f5f;
+}
+
+input, select {
+    margin: 5px 0px;
+}
+
+fieldset {
+    background-color: whitesmoke;
+}
+
+.checkboxGroup, .radioGroup {
+    margin: 5px 0px;
+}
+
+button {
+    margin-top: 5px;
+}
+
+p {
+    color: black;
+    margin: 0;
+}
+
+#dateGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#dataDeNascimento {
+    width: 70%;
+}
