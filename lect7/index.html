@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SnackBar</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+</head>
+
+<body>
+        <header>
+                <img src="popcorn-icon.png" alt="popcorn icon">
+                <h1>SnackBar</h1>
+        </header>
+        <main>
+                <h1>
+                        Produtos para aproveitar enquanto assiste um bom filme
+                </h1>
+                <p>
+                        Aproveite para comprar suas bebidas, pipocas, petiscos e
+                        doces para saborear enquanto assiste a um filme
+                </p>
+
+                <h2>Produtos disponíveis</h2>
+
+                <table>
+                        <tr class="table-header-row">
+                                <th>Produto</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th>Preço total</th>
+                        </tr>
+                        <tr class="table-row">
+                                <td class="product-name">Refrigerante 500ml</td>
+                                <td class="product-price">
+                                        R$<span>10,00</span>
+                                </td>
+                                <td class="product-qtd">
+                                        <button onclick="decrease(this)">-</button>
+                                        <span>0</span>
+                                        <button onclick="increase(this)">+</button>
+                                </td>
+                                <td class="product-total">
+                                        R$<span>0,00</span>
+                                </td>
+                        </tr>
+                        <tr class="table-row">
+                                <td class="product-name">Refrigerante 700ml</td>
+                                <td class="product-price">
+                                        R$<span>12,00</span>
+                                </td>
+                                <td class="product-qtd">
+                                        <button onclick="decrease(this)">-</button>
+                                        <span>0</span>
+                                        <button onclick="increase(this)">+</button>
+                                </td>
+                                <td class="product-total">
+                                        R$<span>0,00</span>
+                                </td>
+                        </tr>
+                        <tr class="table-row">
+                                <td class="product-name">Água com/sem gás 500ml</td>
+                                <td class="product-price">
+                                        R$<span>8,00</span>
+                                </td>
+                                <td class="product-qtd">
+                                        <button onclick="decrease(this)">-</button>
+                                        <span>0</span>
+                                        <button onclick="increase(this)">+</button>
+                                </td>
+                                <td class="product-total">
+                                        R$<span>0,00</span>
+                                </td>
+                        </tr>
+                        <tr class="table-row">
+                                <td class="product-name">Pipoca Pequena Salgada</td>
+                                <td class="product-price">
+                                        R$<span>15,00</span>
+                                </td>
+                                <td class="product-qtd">
+                                        <button onclick="decrease(this)">-</button>
+                                        <span>0</span>
+                                        <button onclick="increase(this)">+</button>
+                                </td>
+                                <td class="product-total">
+                                        R$<span>0,00</span>
+                                </td>
+                        </tr>
+                        <tr class="table-row">
+                                <td class="product-name">Pipoca Média Salgada</td>
+                                <td class="product-price">
+                                        R$<span>20,00</span>
+                                </td>
+                                <td class="product-qtd">
+                                        <button onclick="decrease(this)">-</button>
+                                        <span>0</span>
+                                        <button onclick="increase(this)">+</button>
+                                </td>
+                                <td class="product-total">
+                                        R$<span>0,00</span>
+                                </td>
+                        </tr>
+                        <tr class="table-row">
+                                <td class="product-name">Pipoca Grande Salgada</td>
+                                <td class="product-price">
+                                        R$<span>25,00</span>
+                                </td>
+                                <td class="product-qtd">
+                                        <button onclick="decrease(this)">-</button>
+                                        <span>0</span>
+                                        <button onclick="increase(this)">+</button>
+                                </td>
+                                <td class="product-total">
+                                        R$<span>0,00</span>
+                                </td>
+                        </tr>
+                        <tr class="table-row">
+                                <td class="product-name">Pipoca Pequena Doce</td>
+                                <td class="product-price">
+                                        R$<span>18,00</span>
+                                </td>
+                                <td class="product-qtd">
+                                        <button onclick="decrease(this)">-</button>
+                                        <span>0</span>
+                                        <button onclick="increase(this)">+</button>
+                                </td>
+                                <td class="product-total">
+                                        R$<span>0,00</span>
+                                </td>
+                        </tr>
+                        <tr class="table-row">
+                                <td class="product-name">Pipoca Pequena Doce</td>
+                                <td class="product-price">
+                                        R$<span>24,00</span>
+                                </td>
+                                <td class="product-qtd">
+                                        <button onclick="decrease(this)">-</button>
+                                        <span>0</span>
+                                        <button onclick="increase(this)">+</button>
+                                </td>
+                                <td class="product-total">
+                                        R$<span>0,00</span>
+                                </td>
+                        </tr>
+                        <tr class="table-row">
+                                <td class="product-name">Pipoca Pequena Doce</td>
+                                <td class="product-price">
+                                        R$<span>30,00</span>
+                                </td>
+                                <td class="product-qtd">
+                                        <button onclick="decrease(this)">-</button>
+                                        <span>0</span>
+                                        <button onclick="increase(this)">+</button>
+                                </td>
+                                <td class="product-total">
+                                        R$<span>0,00</span>
+                                </td>
+                        </tr>
+                        <tr class="table-footer-row">
+                                <td>Valor total da Compra</td>
+                                <td></td>
+                                <td></td>
+                                <td class="final-price">R$<span>0,00</span></td>
+                        </tr>
+                </table>
+
+        </main>
+</body>
+
+</html>
